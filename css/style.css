@@ -1,0 +1,17 @@
+h1{
+    color: red;
+}
+.container{
+    display: flex;
+}
+nav{
+    width: 200px;
+    border: 2px dashed red;
+}
+main{
+    flex-grow: 1;
+    border: 2px dashed black;
+}
+.container-top{
+    
+}
