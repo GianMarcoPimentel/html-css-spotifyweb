@@ -262,6 +262,41 @@ footer .sections{
     border: 1px dashed black;
    
 }
+.sections:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 230px;
+}
+
+.album-footer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding-left: 20px;
+
+}
+.img-foot{
+    width: 50px;
+    height: 50px;
+}
+.img-foot img{
+    width: 100%;
+}
+.img-testo h1{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.img-testo h2{
+    color: #717171;
+    font-size: 10px;
+}
+.icons{
+    display: flex;
+    gap: 15px;
+}
 @media screen and (max-width:992px) {
     .main-bottom .album .photo{
         width: calc(100% / 4 - 20px / 4 * 3);
