@@ -10,7 +10,6 @@ body{
 }
 aside {
     background-color: #080B12;
-    border: 2px dashed red;
 
     width: 230px;
     height: 100%;
@@ -23,54 +22,143 @@ main{
     width: calc(100% - 230px);
     color: white;
     overflow: auto;
+    position: relative;
 }
 aside .intestazione{
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
-#cerca::before{
-    content: "";
+#logo{
+    padding: 20px;
+}
+#logo img{
+    width: 130px;
+}
+#home{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 17px;
+    border-left: #ADFF2F solid 3px;
+}
+#home img{
+    width: 20px;
+}
+#cerca{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+#cerca img{
+    width: 20px;
+}
+#cerca p{
+    color: #717171;
+    font-size: 1em;
+}
+#libreria{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+#libreria img{
+    width: 20px;
+}
+#libreria p{
+    color: #717171;
+    font-size: 1em;
 }
 .functions{
     flex-grow: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     padding: 0px 20px 20px 20px;
+    margin-top: 20px;
 }
 .functions .playlist{
-    padding: 10px;
-
     display: flex;
     flex-direction: column;
     gap: 20px;
 
 }
-
+.playlist h1{
+    font-size: 1.2em;
+}
+.functions .playlist .crea-playlist{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.crea-playlist button{
+    background-color: #717171;
+    border: none;
+    width: 3em;
+    height: 3em;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playlist p{
+    font-size: 1em;
+    color: #717171;
+}
 .playlist  ul {
     list-style: none;
 }
 .playlist  ul li{
     margin-bottom: 10px;
+    color: #717171;
+    font-size: 1em;
 }
 .functions .login{
     display: flex;
     align-items: center;
     justify-self: center;
-    gap : 15px;
+    gap : 10px;
 
     border-bottom: 1px grey solid;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
+}
+.functions .login img{
+    width: 1em;
+}
+.functions .login p{
+    font-size: 1em;
+}
+.functions .user{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap : 10px;
+    padding-top: 12px;
+}
+.functions .user img{
+    width: 1em;
+}
+.functions .user p{
+    font-size: 1emx;
+    font-weight: bold;
 }
 .main-top{
     text-align: right;
     background-color: #080B12;
     padding: 20px 35px;
+    
+    width: calc(100% - 230px);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    
 
-   /*  position: fixed; */
 }
 .main-top button{
     border: 3px white solid;
@@ -80,6 +168,7 @@ aside .intestazione{
     color: white;
 }
 .main-center ul{
+    margin-top: 90px;
     padding: 20px 0px;
 
     display: flex;
@@ -180,6 +269,13 @@ footer .sections{
     }
     .main-bottom .album .photo img{
         width: 100%;
+    }
+    .main-center {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-center ul{
+        width: calc(100% / 6 - 25px / 6 * 5);
     }
 }
 /* @media screen and (max-width:480px) {
