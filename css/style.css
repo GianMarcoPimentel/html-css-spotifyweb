@@ -29,15 +29,13 @@ aside .intestazione{
     flex-direction: column;
     gap: 20px;
 }
-#logo{
-    height: 40px;
-    border: 1px white solid;
-    padding: 10px;
-}
 #home{
     height: 20px;
     border: 1px white solid;
     padding: 10px;
+}
+#home img{
+    width: 100%;
 }
 #cerca{
     height: 20px;
