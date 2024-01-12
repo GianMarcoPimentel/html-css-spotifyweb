@@ -25,7 +25,6 @@ main{
     position: relative;
 }
 aside .intestazione{
-    /* padding: 20px; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -35,6 +34,10 @@ aside .intestazione{
 }
 #logo img{
     width: 130px;
+}
+#logo .img{
+    width: 28px;
+    opacity: 0;
 }
 #home{
     display: flex;
@@ -167,16 +170,24 @@ aside .intestazione{
     background-color: #080B12;
     color: white;
 }
+.main-center{
+   
+}
 .main-center ul{
     margin-top: 90px;
     padding: 20px 0px;
-
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px
 }
 .main-center ul li{
     list-style-type: none;
+    width: calc(100% / 6 - 25px / 6 *5);
 }
 .main-center ul li:first-child hr{
     width: 50%;
@@ -239,8 +250,7 @@ aside .intestazione{
 footer{
     width: 100%;
     height: 90px;
-    border: 2px dashed green;
-    background-color: pink;
+    background-color: #282828;
     position: fixed;
     bottom: 0px;
     /* test */
@@ -250,7 +260,6 @@ footer{
 footer .sections{
     width: calc(100% / 3 );
     border: 1px dashed black;
-    padding: 10px 0px;
    
 }
 @media screen and (max-width:992px) {
@@ -278,12 +287,46 @@ footer .sections{
         width: calc(100% / 6 - 25px / 6 * 5);
     }
 }
-/* @media screen and (max-width:480px) {
-    .main-bottom .album .photo{
-        width: 100%;
-        color: white;
+@media screen and (max-width:480px) {
+    aside{
+        width: 50px;
     }
-    .main-bottom .album .photo img{
-        width: 100%;
+    #logo img{
+        display: none;
     }
-} */
+    #logo .img{
+        display: block;
+        opacity: 1;
+        text-align: center;
+    }
+    #home{
+        border: none;
+        padding-left: 20px;
+    }
+    #home img{
+        text-align: center;
+
+    }
+    #cerca img{
+        text-align: center;
+    }
+    #logo p{
+        display: none;
+    }
+     #home p{
+        display: none;
+    }
+     #cerca p{
+        display: none;
+    }
+    .functions{
+        display: none;
+    }
+    main{
+        flex-grow: 1;
+    }
+    .main-top{
+        width: calc(100% - 50px)
+    }
+    
+}
