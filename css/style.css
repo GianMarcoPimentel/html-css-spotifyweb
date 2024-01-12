@@ -21,16 +21,8 @@ aside {
 main{
     background-color: #141922;
     width: calc(100% - 230px);
+    color: white;
     /* height: 100px; */
-}
-.container nav{
-    width: 230px;
-    /* height: 100%; */
-    border: 2px dashed red;
-    background-color: magenta;
-    display: flex;
-    flex-direction: column;
-
 }
 aside .intestazione{
     padding: 20px;
@@ -63,6 +55,7 @@ aside .intestazione{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0px 20px 20px 20px;
 }
 .functions .playlist{
     height: 20px;
@@ -74,64 +67,56 @@ aside .intestazione{
     border: 1px white solid;
     padding: 10px;
 }
-.container main{
-    width: calc(100% - 230px);
-    /* border: 2px dashed black; */
-    
-    /* overflow-y: hidden; */
-}
-.container-top{
+.main-top{
     text-align: end;
     background-color: #080B12;
     padding: 20px 5px;
 }
-.container-top button{
+.main-top button{
     border: 3px white solid;
     padding: 15px 40px;
     border-radius: 20px;
     background-color: #080B12;
     color: white;
 }
-.container-center .options{
+.main-center{
    color: #7D7F84 ;
    text-align: center;
    padding: 20px 0px;
    background-color: #141922;
 }
-.container-center .options ul{
+.main-center ul{
     display: flex;
     gap: 25px;
     justify-content: center;
 }
-.container-center .options ul li{
+.main-center ul li{
     list-style-type: none;
 }
-.container-center .options ul li:first-child hr{
+.main-center ul li:first-child hr{
     width: 50%;
     height: 2px;
     border-color: #95BF59;
     background-color: #95BF59;
+    text-align: center;
 }
-.container-down{
-    background-color: #141922;
-}
-.container-down .album h1{
+.main-bottom .album h1{
     color: white;
     font-size: 20px;
     padding: 20px 0px 0px 20px;
 }
-.container-down .album p{
+.main-bottom .album p{
     color: white;
     font-size: 10px;
     padding: 0px 20px;
 }
-.container-down .photos{
+.main-bottom .photos{
     display: flex;
     justify-content: center;
     gap: 10px;
     padding-top: 20px;
 }
-.container-down .photos .photo{
+.main-bottom .photos .photo{
     width: calc(100% / 6 - 20px);
     height: 100px;
     border: 2px dashed orange;
@@ -142,12 +127,12 @@ aside .intestazione{
     align-items: center;
     justify-content: center;
 }
-.container-down .photos2{
+.main-bottom .photos2{
     display: flex;
     padding: 20px 0px 20px 35px;
     gap: 10px;
 }
-.container-down .photos2 .photo{
+.main-bottom .photos2 .photo{
     width: calc(100% / 6 - 20px);
     height: 100px;
     border: 2px dashed orange;
@@ -158,7 +143,7 @@ aside .intestazione{
      align-items: center;
      justify-content: center;
 }
-.container-down .photos2 .photo2{
+.main-bottom .photos2 .photo2{
     width: calc(100% / 6 - 20px);
     height: 100px;
     border: 2px dashed orange;
