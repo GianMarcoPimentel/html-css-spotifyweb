@@ -5,17 +5,63 @@
 }
 .container{
     display: flex;
+    height: calc(100vh - 90px);
 }
-nav{
-    width: 200px;
+.container nav{
+    width: 230px;
+    /* height: 100%; */
     border: 2px dashed red;
     background-color: magenta;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
 }
-main{
+nav .intestazione{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#logo{
+    height: 40px;
+    border: 1px white solid;
+    padding: 10px;
+}
+#home{
+    height: 20px;
+    border: 1px white solid;
+    padding: 10px;
+}
+#cerca{
+    height: 20px;
+    border: 1px white solid;
+    padding: 10px;
+}
+#libreria{
+    height: 20px;
+    border: 1px white solid;
+    padding: 10px;
+}
+.functions{
     flex-grow: 1;
-    border: 2px dashed black;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.functions .playlist{
+    height: 20px;
+    border: 1px white solid;
+    padding: 10px;
+}
+.functions .login{
+    height: 20px;
+    border: 1px white solid;
+    padding: 10px;
+}
+.container main{
+    width: calc(100% - 230px);
+    /* border: 2px dashed black; */
+    
     /* overflow-y: hidden; */
 }
 .container-top{
@@ -56,12 +102,18 @@ main{
 .container-down .album h1{
     color: white;
     font-size: 20px;
-    padding: 20px;
+    padding: 20px 0px 0px 20px;
+}
+.container-down .album p{
+    color: white;
+    font-size: 10px;
+    padding: 0px 20px;
 }
 .container-down .photos{
     display: flex;
     justify-content: center;
     gap: 10px;
+    padding-top: 20px;
 }
 .container-down .photos .photo{
     width: calc(100% / 6 - 20px);
@@ -76,7 +128,7 @@ main{
 }
 .container-down .photos2{
     display: flex;
-    padding-left: 35px;
+    padding: 20px 0px 20px 35px;
     gap: 10px;
 }
 .container-down .photos2 .photo{
@@ -105,7 +157,7 @@ main{
 }
 footer{
     width: 100%;
-    height: 100px;
+    height: 90px;
     border: 2px dashed green;
     background-color: pink;
     /* position: fixed; */
