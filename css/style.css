@@ -5,7 +5,6 @@
 }
 body{
     display: flex;
-    flex-wrap: wrap;
     height: calc(100vh - 90px);
 
 }
@@ -22,7 +21,7 @@ main{
     background-color: #141922;
     width: calc(100% - 230px);
     color: white;
-    /* height: 100px; */
+    overflow: auto;
 }
 aside .intestazione{
     padding: 20px;
@@ -68,27 +67,25 @@ aside .intestazione{
     padding: 10px;
 }
 .main-top{
-    text-align: end;
+    text-align: right;
     background-color: #080B12;
-    padding: 20px 5px;
+    padding: 20px 35px;
+
+   /*  position: fixed; */
 }
 .main-top button{
     border: 3px white solid;
     padding: 15px 40px;
-    border-radius: 20px;
+    border-radius: 50px;
     background-color: #080B12;
     color: white;
 }
-.main-center{
-   color: #7D7F84 ;
-   text-align: center;
-   padding: 20px 0px;
-   background-color: #141922;
-}
 .main-center ul{
+    padding: 20px 0px;
+
     display: flex;
-    gap: 25px;
     justify-content: center;
+    gap: 25px;
 }
 .main-center ul li{
     list-style-type: none;
@@ -100,32 +97,27 @@ aside .intestazione{
     background-color: #95BF59;
     text-align: center;
 }
-.main-bottom .album h1{
+.main-bottom h1{
     color: white;
     font-size: 20px;
     padding: 20px 0px 0px 20px;
 }
-.main-bottom .album p{
-    color: white;
-    font-size: 10px;
-    padding: 0px 20px;
-}
-.main-bottom .photos{
+.main-bottom .album{
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 12px 20px 12px 20px;
 }
-.main-bottom .photos .photo{
-    width: calc(100% / 6 - 20px);
-    height: 100px;
-    border: 2px dashed orange;
-    text-align: center;
+.main-bottom .album .photo{
+    width: calc(100% / 6 - 20px / 6 * 5);
     color: white;
-    /* test */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+.main-bottom .album .photo img{
+    width: 100%;
+}
+.main-bottom .album .photo .cerchio{
+    border-radius: 50%;
+    object-fit: cover;
 }
 .main-bottom .photos2{
     display: flex;
@@ -161,7 +153,8 @@ footer{
     height: 90px;
     border: 2px dashed green;
     background-color: pink;
-    /* position: fixed; */
+    position: fixed;
+    bottom: 0px;
     /* test */
     display: flex;
     align-items: center;
@@ -171,4 +164,13 @@ footer .sections{
     border: 1px dashed black;
     padding: 10px 0px;
    
+}
+@media screen and (max-width:992px) {
+    .main-bottom .album .photo{
+        width: calc(100% / 4 - 20px / 4 * 3);
+        color: white;
+    }
+    .main-bottom .album .photo img{
+        width: 100%;
+    }
 }
