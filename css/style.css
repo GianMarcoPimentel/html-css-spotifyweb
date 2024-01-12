@@ -49,9 +49,7 @@ aside .intestazione{
     gap: 20px;
 
 }
-.functions .playlist:nth-child(1){
-    color: red;
-}
+
 .playlist  ul {
     list-style: none;
 }
@@ -59,9 +57,13 @@ aside .intestazione{
     margin-bottom: 10px;
 }
 .functions .login{
-    height: 20px;
-    border: 1px white solid;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap : 15px;
+
+    border-bottom: 1px grey solid;
+    padding-bottom: 10px;
 }
 .main-top{
     text-align: right;
