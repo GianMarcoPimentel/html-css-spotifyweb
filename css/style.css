@@ -22,13 +22,6 @@ aside {
 
     padding: 20px 20px 0px;
 }
-main{
-    background-color: #141922;
-    width: calc(100% - 230px);
-    color: white;
-    overflow: auto;
-    position: relative;
-}
 aside .intestazione{
     display: flex;
     flex-direction: column;
@@ -166,11 +159,20 @@ aside .intestazione{
     font-size: 1em;
     font-weight: bold;
 }
+main{
+    background-color: #141922;
+    width: calc(100% - 230px);
+    color: white;
+    overflow-y: auto;
+    /* position: relative; */
+    padding: 0px 20px 20px;
+}
 .main-top{
     text-align: right;
     background-color: #080B12;
     padding: 20px 35px;
-    
+
+    height: 90px;
     width: calc(100% - 230px);
     position: fixed;
     top: 0px;
@@ -185,82 +187,67 @@ aside .intestazione{
     background-color: #080B12;
     color: white;
 }
-.main-center{
-   
-}
 .main-center ul{
     margin-top: 90px;
     padding: 20px 0px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 25px
-}
-.main-center ul li{
+    width: 100%;
+
     list-style-type: none;
-    width: calc(100% / 6 - 25px / 6 *5);
-}
-.main-center ul li:first-child hr{
-    width: 50%;
-    height: 2px;
-    border-color: #95BF59;
-    background-color: #95BF59;
-    text-align: center;
+
+
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap;
+    gap: 25px;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
 }
 .main-bottom h1{
     color: white;
     font-size: 20px;
     padding: 20px 0px 0px 20px;
 }
-.main-bottom .album{
+
+.first-album ,
+.second-album ,
+.third-album{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 12px 20px 12px 20px;
+    gap: 16px;
+}  
+.album {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: calc(100% / 6 - 16px / 6 * 5);
+
+    margin-bottom: 16px;
+    /* max-width: 200px; */
 }
-.main-bottom .album .photo{
-    width: calc(100% / 6 - 20px / 6 * 5);
+.testo{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
     color: white;
 }
-.main-bottom .album .photo img{
+.artista{
+    text-align: center;
+    font-size: 12px;
+    color: #a3a3a3;
+}
+.album .photo {
+    margin-bottom: 16px;
+}
+
+.album .photo img{
     width: 100%;
 }
 .main-bottom .album .photo .cerchio{
     border-radius: 50%;
     object-fit: cover;
-}
-.main-bottom .photos2{
-    display: flex;
-    padding: 20px 0px 20px 35px;
-    gap: 10px;
-}
-.main-bottom .photos2 .photo{
-    width: calc(100% / 6 - 20px);
-    height: 100px;
-    border: 2px dashed orange;
-    text-align: center;
-    color: white;
-     /* test */
-     display: flex;
-     align-items: center;
-     justify-content: center;
-}
-.main-bottom .photos2 .photo2{
-    width: calc(100% / 6 - 20px);
-    height: 100px;
-    border: 2px dashed orange;
-    border-radius: 50%;
-    text-align: center;
-    color: white;
-    object-fit: cover;
-     /* test */
-     display: flex;
-     align-items: center;
-     justify-content: center;
 }
 footer{
     width: 100%;
@@ -268,28 +255,48 @@ footer{
     background-color: #282828;
     position: fixed;
     bottom: 0px;
+
+    padding: 10px;
     /* test */
-    display: flex;
-    align-items: center;
-}
-footer .sections{
-    width: calc(100% / 3 );
-    border: 1px dashed black;
-   
-}
-.sections:first-child{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 230px;
+}
+footer .section-1{
+    /* max- */width: 15%;
+    border: 1px dashed black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-right: 220px; */
+}
+footer .section-2{
+    max-width: 60%;
+    border: 1px dashed black;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /*  margin-right: 230px; */
+   
+}
+footer .section-3{
+    /* max- */width: 15%;
+    border: 1px dashed black;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /*  margin-right: 230px; */
+   text-align: center;
+
 }
 
 .album-footer{
     display: flex;
     align-items: center;
     gap: 10px;
-
-    20px;
 
 }
 .img-foot{
@@ -313,28 +320,15 @@ footer .sections{
     gap: 15px;
 }
 @media screen and (max-width:992px) {
-    .main-bottom .album .photo{
-        width: calc(100% / 4 - 20px / 4 * 3);
-        color: white;
+
+    .album {
+        width: calc(100% / 4 - 16px / 4 * 3);
     }
-    .main-bottom .album .photo img{
-        width: 100%;
-    }
+
 }
 @media screen and (max-width:768px) {
-    .main-bottom .album .photo{
-        width: calc(100% / 2 - 20px / 2 * 1);
-        color: white;
-    }
-    .main-bottom .album .photo img{
-        width: 100%;
-    }
-    .main-center {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .main-center ul{
-        width: calc(100% / 6 - 25px / 6 * 5);
+    .album {
+        width: calc(100% / 2 - 16px / 2);
     }
 }
 @media screen and (max-width:576px) {
